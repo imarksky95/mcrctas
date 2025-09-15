@@ -1,0 +1,83 @@
+:root {
+  /* Typography */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Blue color palette inspired by logo */
+  --blue-dark: #254e7b;
+  --blue-main: #2a7ecb;
+  --blue-light: #4fc3f7;
+  --blue-gradient: linear-gradient(90deg, #4fc3f7 0%, #2a7ecb 40%, #254e7b 100%);
+  --accent: #5e8fff;
+  --background: #f4faff;
+  --text-main: #1a2636;
+  --text-light: #ffffff;
+
+  color-scheme: light dark;
+  color: var(--text-light);
+  background-color: var(--blue-dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--blue-main);
+  text-decoration: inherit;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--blue-main);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: var(--blue-main);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+}
+button:hover {
+  background: var(--blue-dark);
+  border-color: var(--accent);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--accent);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-main);
+    background-color: var(--background);
+  }
+  a:hover {
+    color: var(--blue-light);
+  }
+  button {
+    background: var(--blue-light);
+    color: var(--text-main);
+  }
+}
